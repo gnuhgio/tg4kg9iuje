@@ -1,0 +1,40 @@
+class Personaje:
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        self.Inteligencia = Inteligencia
+        self.Fuerza = Fuerza
+        self.Percepcion = Percepcion
+        self.Destreza = Destreza
+        self.Velocidad = Velocidad
+
+class Detective(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+
+
+class Apostador(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+
+class Politico(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+
+class Medica(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+
+class azafata(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+
+class Deportista(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+
+Sombra_Nocturna = Detective(45, 10, 30, 5, 5)
+Ricardo_El_Temerario = Apostador(35, 5, 40, 45, 10)
+Isolde_La_Justa = Politico(5, 0, 10, 5, 3)
+Antonia = Medica(25, 5, 40, 50, 20)
+Elisa = azafata(10, 8, 14, 28, 23)
+El_Caballero_Dragon = Deportista(8, 47, 39, 49, 36)
+
