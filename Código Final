@@ -1,0 +1,75 @@
+import pygame
+import sys
+
+pygame.display.set_mode((1600,800))
+pygame.display.set_caption("Juego")
+class Personaje:
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        self.Inteligencia = Inteligencia
+        self.Fuerza = Fuerza
+        self.Percepcion = Percepcion
+        self.Destreza = Destreza
+        self.Velocidad = Velocidad
+
+class Detective(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+        Inteligencia = 45
+        Fuerza = 10
+        Percepcion = 30
+        Destreza = 5
+        Velocidad = 5
+
+class Apostador(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+        Inteligencia = 35
+        Fuerza = 5
+        Percepcion = 40
+        Destreza = 45
+        Velocidad = 10
+
+class Politico(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+        Inteligencia = 5
+        Fuerza = 0
+        Percepcion = 10
+        Destreza = 5
+        Velocidad = 3
+
+class Medica(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+        Inteligencia = 25
+        Fuerza = 5
+        Percepcion = 40
+        Destreza = 50
+        Velocidad = 20
+
+class azafata(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+        Inteligencia = 10
+        Fuerza = 8
+        Percepcion = 14
+        Destreza = 28
+        Velocidad = 23
+
+class Deportista(Personaje):
+    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+        Inteligencia = 8
+        Fuerza = 47
+        Percepcion = 39
+        Destreza = 49
+        Velocidad = 36
+
+class enterevistador:
+    def __init__(self, Estado):
+        self.Estado = Estado
+        Estado = 50
+        
+#se cambio de lugar los valores de las habilidades de cada personaja.
+#RAZON: Mala praxis, para que no "carge" todo de una.
+# se mofidicaron algunos valores
