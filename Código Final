@@ -1,6 +1,9 @@
 import pygame
 import sys
 
+Vida = 1
+
+while Vida == 1:
 pygame.display.set_mode((1600,800))
 pygame.display.set_caption("Juego")
 class Personaje:
