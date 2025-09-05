@@ -72,4 +72,8 @@ class enterevistador:
     def __init__(self, Estado):
         self.Estado = Estado
         Estado = 50
-        
+
+
+print("Juego: Juego")
+print("Seleccione al boludo que te va a representar el resto del dia")
+Seleccion = input("Seleccione el nombre ")
