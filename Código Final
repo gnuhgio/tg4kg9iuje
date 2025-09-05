@@ -70,6 +70,3 @@ class enterevistador:
         self.Estado = Estado
         Estado = 50
         
-#se cambio de lugar los valores de las habilidades de cada personaja.
-#RAZON: Mala praxis, para que no "carge" todo de una.
-# se mofidicaron algunos valores
