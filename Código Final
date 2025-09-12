@@ -1,79 +1,111 @@
 import pygame
 import sys
 
+
 Vida = 1
-
+Rojo = (255, 0, 0)
+Blanco = (255, 255, 255)
+Cierre = True
+pygame.init()
+Imagen_Fondo = pygame.image.load("Z:\Documentos\Robotica\Sin título.png")
 while Vida == 1:
-pygame.display.set_mode((1600,800))
-pygame.display.set_caption("Juego")
-class Personaje:
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        self.Inteligencia = Inteligencia
-        self.Fuerza = Fuerza
-        self.Percepcion = Percepcion
-        self.Destreza = Destreza
-        self.Velocidad = Velocidad
+    Pantalla = pygame.display.set_mode((1600,800))
+    pygame.display.set_caption("Juego")
+    Pantalla.blit(Imagen_Fondo, (0, 0))
+    while Vida == 1:
+          for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                      Cierre == False   
+                elif event.type == pygame.KEYDOWN:
+                      if event.key == pygame.K_p:
+                            pygame.quit()
+                      
+    class Personaje:
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                self.Inteligencia = Inteligencia
+                self.Fuerza = Fuerza
+                self.Percepcion = Percepcion
+                self.Destreza = Destreza
+                self.Velocidad = Velocidad
 
-class Detective(Personaje):
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
-        Inteligencia = 45
-        Fuerza = 10
-        Percepcion = 30
-        Destreza = 5
-        Velocidad = 5
+    class Detective(Personaje):
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+                Inteligencia = 45
+                Fuerza = 10
+                Percepcion = 30
+                Destreza = 5
+                Velocidad = 5
 
-class Apostador(Personaje):
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
-        Inteligencia = 35
-        Fuerza = 5
-        Percepcion = 40
-        Destreza = 45
-        Velocidad = 10
+    class Apostador(Personaje):
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+                Inteligencia = 35
+                Fuerza = 5
+                Percepcion = 40
+                Destreza = 45
+                Velocidad = 10
 
-class Politico(Personaje):
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
-        Inteligencia = 5
-        Fuerza = 0
-        Percepcion = 10
-        Destreza = 5
-        Velocidad = 3
+    class Politico(Personaje):
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+                Inteligencia = 5
+                Fuerza = 0
+                Percepcion = 10
+                Destreza = 5
+                Velocidad = 3
 
-class Medica(Personaje):
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
-        Inteligencia = 25
-        Fuerza = 5
-        Percepcion = 40
-        Destreza = 50
-        Velocidad = 20
+    class Medica(Personaje):
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+                Inteligencia = 25
+                Fuerza = 5
+                Percepcion = 40
+                Destreza = 50
+                Velocidad = 20
 
-class azafata(Personaje):
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
-        Inteligencia = 10
-        Fuerza = 8
-        Percepcion = 14
-        Destreza = 28
-        Velocidad = 23
+    class azafata(Personaje):
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+                Inteligencia = 10
+                Fuerza = 8
+                Percepcion = 14
+                Destreza = 28
+                Velocidad = 23
 
-class Deportista(Personaje):
-    def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
-        super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
-        Inteligencia = 8
-        Fuerza = 47
-        Percepcion = 39
-        Destreza = 49
-        Velocidad = 36
+    class Deportista(Personaje):
+            def __init__(self, Inteligencia, Fuerza, Percepcion, Destreza, Velocidad):
+                super().__init__(Inteligencia, Fuerza, Percepcion, Destreza, Velocidad)
+                Inteligencia = 8
+                Fuerza = 47
+                Percepcion = 39
+                Destreza = 49
+                Velocidad = 36
 
-class enterevistador:
-    def __init__(self, Estado):
-        self.Estado = Estado
-        Estado = 50
+    class enterevistador:
+            def __init__(self, Estado):
+                self.Estado = Estado
+                Estado = 50
 
+        
 
-print("Juego: Juego")
-print("Seleccione al boludo que te va a representar el resto del dia")
-Seleccion = input("Seleccione el nombre ")
+    #Despertar en el interrogatorio sin saber como llegaste ahi
+
+    print("Juego: Juego")
+    print("Seleccione al boludo que te va a representar el resto del dia")
+    Seleccion = input("Seleccione el nombre ")
+    Seleccion = input("Ingrese la clase que desea usar ")
+
+    print("Despertas en una sala, ciertamente todo parece oscuro")
+    print("Where i am, what is this place")
+    print("A lo lejos logras escuchar leves voces que parecen nombrarte")
+    print("Despues de un tiempo se enciende una luz, al primer momento te ciega. Aparece una sombra")
+    print("hey, are you alive")
+    print("yes, but what is this place")
+    print("you are in an interrogation room")
+    print("why?")
+    print("because why think that you are an assesin, but we dont now excaly if you kill someone")
+    print("I dont kill people, is imposible that me kill someone. never in my life i touch a gun")
+    print("Discuten un muy buen rato, diria que discutieron por lo menos 1 hora, no me acuerdo con exactitud")
+    pygame.display.flip()
+pygame.quit()
